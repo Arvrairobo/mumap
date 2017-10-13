@@ -37,7 +37,9 @@ z = d * 1;
 if(z<=2){  
 var popupText = busstop[i][2];
 var markerLocation = new L.LatLng(lat1, lon1);
-var marker = new L.Marker(markerLocation,{icon: busIcon});
+var pulsingIcon = L.icon.pulse({iconSize:[14,14],color:'red'});
+var marker = new L.marker(markerLocation,{icon: pulsingIcon});
+//var marker = new L.Marker(markerLocation,{icon: busIcon});
 map.addLayer(marker);
 marker.bindPopup(popupText);
         }
